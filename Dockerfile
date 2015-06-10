@@ -14,3 +14,5 @@ RUN apt-get update && \
     # cp /root/dreamstar /var/www/dreamstar
 
 EXPOSE 80
+
+CMD ["/etc/init.d/apache2 restart"]
