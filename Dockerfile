@@ -19,4 +19,4 @@ ENV SERVERNAME localhost:80
 
 EXPOSE 80
 
-CMD ["/etc/init.d/apache2 restart"]
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
