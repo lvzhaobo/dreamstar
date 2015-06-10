@@ -12,8 +12,8 @@ RUN apt-get update && \
     git clone https://github.com/lvzhaobo/dreamstar.git
     # mkdir -p /var/www/dreamstar && \
     # cp /root/dreamstar /var/www/dreamstar
-
-ENV APACHE_SERVERNAME localhost
+RUN echo "ServerName burning-dreamstar.daoapp.io">>/etc/apache2/apache2.conf
+# ENV APACHE_SERVERNAME localhost
 
 EXPOSE 80
 
