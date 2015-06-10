@@ -13,6 +13,8 @@ RUN apt-get update && \
     # mkdir -p /var/www/dreamstar && \
     # cp /root/dreamstar /var/www/dreamstar
 
+ENV APACHE_SERVERNAME localhost
+
 EXPOSE 80
 
 CMD ["/etc/init.d/apache2 restart"]
