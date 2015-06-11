@@ -17,6 +17,12 @@ RUN echo "ServerName my-dreamstar.com:80" >> /etc/apache2/apache2.conf
 #ENV APACHE_SERVERNAME localhost:80
 #ENV SERVERNAME localhost:80
 
+ENV APACHE_LOCK_DIR /var/log/apache2
+ENV APACHE_PID_FILE /var/run/apache2.pid
+ENV APACHE_RUN_DIR /var/run/apache2
+ENV APACHE_LOCK_DIR /var/lock/apache2
+ENV APACHE_DOCUMENTROOT /var/www/dreamstar
+
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
