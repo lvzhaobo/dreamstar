@@ -14,8 +14,8 @@ RUN apt-get update && \
     # cp /root/dreamstar /var/www/dreamstar
 RUN echo "ServerName my-dreamstar.com:80" >> /etc/apache2/apache2.conf
 
-ENV APACHE_SERVERNAME localhost:80
-ENV SERVERNAME localhost:80
+#ENV APACHE_SERVERNAME localhost:80
+#ENV SERVERNAME localhost:80
 
 EXPOSE 80
 
