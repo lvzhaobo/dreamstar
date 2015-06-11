@@ -13,6 +13,7 @@ RUN apt-get update && \
     # mkdir -p /var/www/dreamstar && \
     # cp /root/dreamstar /var/www/dreamstar
 
+RUN echo "#ServerName" >> /etc/apache2/apache2.conf
 RUN echo "\r\nServerName dreamstar" >> /etc/apache2/apache2.conf
 
 
