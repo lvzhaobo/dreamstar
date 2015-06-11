@@ -15,6 +15,9 @@ RUN apt-get update && \
 
 RUN echo "\r\nServerName dreamstar" >> /etc/apache2/apache2.conf
 
+
+RUN "mkdir -p /var/lock/apache2"
+
 #ENV APACHE_SERVERNAME localhost:80
 #ENV SERVERNAME localhost:80
 ENV APACHE_RUN_USER www-data
