@@ -15,12 +15,7 @@ RUN apt-get update && \
 
 RUN echo "#ServerName" >> /etc/apache2/apache2.conf
 RUN echo "\r\nServerName dreamstar" >> /etc/apache2/apache2.conf
-RUN echo "\r\n<Directory />
-Options FollowSymLinks
-AllowOverride None
-Order allow,deny
-Allow from all
-</Directory>\r\n" >> /etc/apache2/apache2.conf
+RUN echo "\r\n<Directory />\r\nOptions FollowSymLinks\r\nAllowOverride None\r\nOrder allow,deny\r\nAllow from all\r\n</Directory>\r\n" >> /etc/apache2/apache2.conf
 
 RUN mkdir -p /var/lock/apache2
 
