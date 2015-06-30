@@ -1,4 +1,5 @@
-lizhi
+Zhengzhou University DreamStar English Club Website
 =====
 
-lizhi middle school
+Website for zzu dreamstar English club.
+A project for studing website design and development.
