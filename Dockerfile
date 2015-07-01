@@ -17,6 +17,9 @@ RUN echo "#ServerName" >> /etc/apache2/apache2.conf
 RUN echo "\r\nServerName dreamstar" >> /etc/apache2/apache2.conf
 RUN echo "\r\n<Directory />\r\nOptions FollowSymLinks\r\nAllowOverride None\r\nOrder allow,deny\r\nAllow from all\r\n</Directory>\r\n" >> /etc/apache2/apache2.conf
 
+ADD run.sh /run.sh
+RUN chmod 755 /*.sh
+
 RUN mkdir -p /var/lock/apache2
 
 #ENV APACHE_SERVERNAME localhost:80
@@ -31,4 +34,4 @@ ENV APACHE_DOCUMENTROOT /var/www/dreamstar
 
 EXPOSE 80
 
-CMD ["/etc/init.d/apache2 start"]
+CMD ["/run.sh"]
