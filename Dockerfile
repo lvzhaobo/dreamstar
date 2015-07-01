@@ -7,8 +7,8 @@ RUN apt-get update && \
     # apt-get install php5 -y && \
     # apt-get install php5-mysql -y && \
     apt-get install git -y && \
-    mkdir -p /var/www/dreamstar && \
-    cd /var/www/dreamstar && \
+    mkdir -p /var/www && \
+    cd /var/www && \
     git clone https://github.com/lvzhaobo/dreamstar.git
     # mkdir -p /var/www/dreamstar && \
     # cp /root/dreamstar /var/www/dreamstar
