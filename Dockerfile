@@ -7,13 +7,13 @@ RUN apt-get update && \
     # apt-get install php5 -y && \
     # apt-get install php5-mysql -y && \
     apt-get install git -y && \
-    mkdir -p /var/www && \
-    cd /var/www && \
+    mkdir -p /var/www/html && \
+    cd /var/www/html && \
     git clone https://github.com/lvzhaobo/dreamstar.git
     # mkdir -p /var/www/dreamstar && \
     # cp /root/dreamstar /var/www/dreamstar
 
-RUN mv /var/www/index.html /var/www/index2.html
+RUN mv /var/www/html/index.html /var/www/html/index2.html
 
 RUN echo "#ServerName" >> /etc/apache2/apache2.conf
 RUN echo "\r\nServerName dreamstar" >> /etc/apache2/apache2.conf
